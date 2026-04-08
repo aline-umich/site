@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ian — 28 Anos ✦ イアン誕生日</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;700;900&family=Noto+Serif+JP:wght@300;400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink: #0D0A14;
+  --ink2: #1A1428;
+  --paper: #F7F3EE;
+  --paper2: #EDE8E0;
+  --red: #C1272D;
+  --red2: #E8453C;
+  --pink: #F4A7B0;
+  --sakura: #F9D0D8;
+  --teal: #2A9D8F;
+  --gold: #E8C547;
+  --indigo: #3D4B8C;
+  --muted: #C0B4CC;
+  --border: rgba(193,39,45,0.18);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  background: var(--ink);
+  color: var(--paper);
+  min-height: 100vh;
+  overflow-x: hidden;
+  cursor: crosshair;
+}
+
+/* ── ANIMATED BACKGROUND ── */
+.bg-layer {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+}
+.bg-kanji {
+  position: absolute; font-family: 'Noto Serif JP', serif;
+  font-size: clamp(80px, 15vw, 180px); font-weight: 900;
+  color: rgba(255,255,255,0.025); line-height: 1;
+  user-select: none; animation: drift 20s linear infinite;
+}
+.bg-kanji:nth-child(1) { top: 5%; left: -5%; animation-delay: 0s; }
+.bg-kanji:nth-child(2) { top: 30%; right: -3%; animation-delay: -6s; font-size: clamp(60px,10vw,120px); }
+.bg-kanji:nth-child(3) { bottom: 15%; left: 8%; animation-delay: -12s; font-size: clamp(50px,8vw,100px); }
+.bg-kanji:nth-child(4) { top: 60%; left: 40%; animation-delay: -4s; font-size: clamp(40px,6vw,80px); }
+@keyframes drift { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-20px) rotate(2deg)} }
+
+.sakura {
+  position: absolute;
+  opacity: 0;
+  animation: fall linear infinite;
+  pointer-events: none;
+}
+@keyframes fall {
+  0%   { transform: translateY(-30px) rotate(0deg)   translateX(0px);   opacity: 0; }
+  5%   { opacity: 0.85; }
+  95%  { opacity: 0.6; }
+  100% { transform: translateY(110vh) rotate(540deg) translateX(80px);  opacity: 0; }
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 0 2rem; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(13,10,20,0.85); backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(193,39,45,0.3);
+}
+.nav-brand {
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.nav-torii {
+  font-size: 1.3rem; filter: drop-shadow(0 0 6px rgba(232,69,60,0.6));
+}
+.nav-title {
+  font-family: 'Noto Serif JP', serif; font-size: 0.95rem; font-weight: 700;
+  letter-spacing: 0.08em; color: var(--paper);
+}
+.nav-jp { font-size: 0.7rem; color: var(--red2); letter-spacing: 0.15em; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); text-decoration: none; transition: color 0.2s;
+  position: relative;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
+  height: 1px; background: var(--red2); transform: scaleX(0);
+  transition: transform 0.2s; transform-origin: left;
+}
+.nav-links a:hover { color: var(--paper); }
+.nav-links a:hover::after { transform: scaleX(1); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh; position: relative; z-index: 1;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 5rem 2rem 3rem;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 40%, rgba(193,39,45,0.15) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 80%, rgba(61,75,140,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-stamp {
+  display: inline-block;
+  border: 3px solid var(--red2); border-radius: 4px;
+  padding: 4px 14px; margin-bottom: 2rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.72rem; letter-spacing: 0.22em;
+  color: var(--red2); text-transform: uppercase;
+  position: relative; transform: rotate(-1.5deg);
+  box-shadow: 0 0 12px rgba(232,69,60,0.25);
+}
+.hero-stamp::before {
+  content: ''; position: absolute; inset: 2px;
+  border: 1px solid rgba(232,69,60,0.3); border-radius: 2px;
+}
+.hero-jp-big {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1rem, 3vw, 1.6rem); font-weight: 400;
+  letter-spacing: 0.35em; color: var(--muted);
+  margin-bottom: 0.75rem; display: block;
+}
+.hero h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(4.5rem, 16vw, 10rem);
+  font-weight: 900; line-height: 0.85;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--paper) 30%, var(--red2) 70%, var(--gold) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.hero-sub-row {
+  display: flex; align-items: center; gap: 1.5rem;
+  margin-top: 2rem; justify-content: center;
+}
+.hero-age-badge {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.72rem; letter-spacing: 0.18em; color: var(--gold);
+  border: 1px solid rgba(232,197,71,0.35); padding: 5px 12px; border-radius: 3px;
+}
+.hero-desc {
+  font-size: 0.92rem; color: var(--muted); font-weight: 400;
+  line-height: 1.7; max-width: 340px;
+}
+.hero-num {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(6rem, 20vw, 14rem); font-weight: 900;
+  color: rgba(193,39,45,0.08); position: absolute;
+  bottom: -2rem; right: -1rem; line-height: 1;
+  user-select: none; pointer-events: none;
+}
+.scroll-cue {
+  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 5px;
+  font-size: 0.65rem; letter-spacing: 0.2em; color: var(--muted); text-transform: uppercase;
+  animation: bob 2.2s ease-in-out infinite;
+}
+.scroll-cue span { font-size: 1.1rem; color: var(--red2); }
+@keyframes bob { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(7px)} }
+
+/* ── SECTIONS ── */
+section { position: relative; z-index: 1; padding: 6rem 2rem; }
+section:nth-child(even) { background: rgba(255,255,255,0.02); }
+
+.s-header { text-align: center; margin-bottom: 4rem; }
+.s-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--red2); margin-bottom: 1rem;
+}
+.s-eyebrow::before, .s-eyebrow::after {
+  content: ''; display: block; width: 30px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--red2));
+}
+.s-eyebrow::after { transform: rotate(180deg); }
+.s-header h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(2rem, 5vw, 3rem); font-weight: 700;
+  color: var(--paper); line-height: 1.2;
+}
+.s-header h2 .jp { display: block; font-size: 0.45em; font-weight: 400; color: var(--muted); letter-spacing: 0.3em; margin-top: 4px; }
+.s-desc { font-size: 0.9rem; color: var(--muted); margin-top: 0.75rem; line-height: 1.7; max-width: 440px; margin-inline: auto; font-weight: 400; }
+.red-line { width: 40px; height: 2px; background: var(--red2); margin: 1.25rem auto 0; }
+
+/* ── QUIZ ── */
+.quiz-wrap { max-width: 660px; margin: 0 auto; }
+.quiz-prog-track {
+  height: 2px; background: rgba(255,255,255,0.08); margin-bottom: 2rem; position: relative;
+}
+.quiz-prog-fill {
+  height: 100%; background: linear-gradient(90deg, var(--red), var(--red2));
+  transition: width 0.5s ease; width: 0%;
+  box-shadow: 0 0 8px rgba(232,69,60,0.5);
+}
+.quiz-card {
+  background: var(--ink2); border: 1px solid rgba(193,39,45,0.25);
+  border-radius: 4px; padding: 2.5rem;
+  position: relative; overflow: hidden;
+}
+.quiz-card::before {
+  content: '問'; font-family: 'Noto Serif JP', serif; font-size: 10rem; font-weight: 900;
+  position: absolute; right: -1.5rem; top: -2rem;
+  color: rgba(255,255,255,0.025); line-height: 1; pointer-events: none;
+}
+.quiz-num {
+  font-family: 'Share Tech Mono', monospace; font-size: 0.7rem;
+  letter-spacing: 0.2em; color: var(--red2); margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 8px;
+}
+.quiz-num::before { content: ''; display:block; width: 20px; height: 1px; background: var(--red2); }
+.quiz-q {
+  font-family: 'Noto Serif JP', serif; font-size: 1.3rem; font-weight: 400;
+  color: var(--paper); line-height: 1.55; margin-bottom: 2rem;
+}
+.quiz-opts { display: grid; gap: 0.65rem; }
+.quiz-opt {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.85rem 1.2rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 3px; cursor: pointer; background: transparent;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  color: var(--paper); font-size: 0.92rem; text-align: left;
+  transition: all 0.2s; width: 100%;
+}
+.quiz-opt:hover { border-color: var(--red2); background: rgba(193,39,45,0.08); }
+.quiz-opt.correct { border-color: var(--teal); background: rgba(42,157,143,0.12); }
+.quiz-opt.wrong { border-color: var(--red); background: rgba(193,39,45,0.12); }
+.opt-glyph {
+  font-family: 'Noto Serif JP', serif; font-size: 0.8rem; font-weight: 700;
+  color: var(--red2); min-width: 22px; text-align: center;
+  border: 1px solid rgba(193,39,45,0.3); padding: 2px 5px; border-radius: 2px;
+  transition: all 0.2s;
+}
+.quiz-opt.correct .opt-glyph { color: var(--teal); border-color: var(--teal); }
+.quiz-opt.wrong .opt-glyph { color: var(--red); border-color: var(--red); }
+.quiz-fb {
+  margin-top: 0.85rem; padding: 0.85rem 1.1rem; border-radius: 3px;
+  font-size: 0.86rem; line-height: 1.55; display: none; border-left: 3px solid;
+}
+.quiz-fb.ok { display: block; border-color: var(--teal); background: rgba(42,157,143,0.1); color: #7FD8CC; }
+.quiz-fb.fail { display: block; border-color: var(--red); background: rgba(193,39,45,0.1); color: #F4A7A7; }
+.quiz-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 2rem;
+}
+.quiz-score-txt {
+  font-family: 'Share Tech Mono', monospace; font-size: 0.78rem;
+  color: var(--muted); letter-spacing: 0.08em;
+}
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 0.6rem 1.4rem; border-radius: 3px;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 0.82rem; letter-spacing: 0.06em; font-weight: 700;
+  cursor: pointer; transition: all 0.2s;
+  background: var(--red2); border: none; color: white;
+}
+.btn-primary:hover { background: var(--red); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(232,69,60,0.35); }
+.btn-primary:disabled { opacity: 0.35; cursor: not-allowed; transform: none; box-shadow: none; }
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 0.6rem 1.4rem; border-radius: 3px;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 0.82rem; letter-spacing: 0.06em; font-weight: 700;
+  cursor: pointer; transition: all 0.2s;
+  background: transparent; border: 1px solid rgba(193,39,45,0.4); color: var(--red2);
+}
+.btn-ghost:hover { background: rgba(193,39,45,0.1); border-color: var(--red2); }
+
+.quiz-result { display: none; text-align: center; padding: 3rem 1rem; }
+.quiz-result.show { display: block; }
+.result-kanji {
+  font-family: 'Noto Serif JP', serif; font-size: 5rem; font-weight: 900;
+  color: var(--red2); line-height: 1;
+  filter: drop-shadow(0 0 16px rgba(232,69,60,0.4));
+}
+.result-score { font-family: 'Share Tech Mono', monospace; font-size: 0.82rem; color: var(--muted); margin: 0.5rem 0 1.5rem; letter-spacing: 0.12em; }
+.result-msg { font-family: 'Noto Serif JP', serif; font-size: 1.4rem; font-weight: 400; color: var(--paper); line-height: 1.4; }
+
+/* ── FOTOS ── */
+.upload-zone {
+  border: 1px dashed rgba(193,39,45,0.4); border-radius: 4px;
+  padding: 2.5rem; text-align: center; cursor: pointer;
+  transition: all 0.25s; background: rgba(255,255,255,0.02);
+  display: block; max-width: 680px; margin: 0 auto 2rem;
+}
+.upload-zone:hover { border-color: var(--red2); background: rgba(193,39,45,0.05); }
+.upload-zone input { display: none; }
+.uz-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+.uz-text { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+.uz-text strong { color: var(--red2); font-weight: 700; }
+
+.photo-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem; max-width: 900px; margin: 0 auto;
+}
+.photo-card {
+  position: relative; aspect-ratio: 1; border-radius: 3px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06); cursor: pointer;
+  background: var(--ink2);
+}
+.photo-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s, filter 0.3s; filter: saturate(0.8); }
+.photo-card:hover img { transform: scale(1.06); filter: saturate(1); }
+.photo-card .photo-overlay {
+  position: absolute; inset: 0; background: rgba(193,39,45,0.0);
+  transition: background 0.25s; display: flex; align-items: flex-end; padding: 8px;
+}
+.photo-card:hover .photo-overlay { background: rgba(13,10,20,0.45); }
+.photo-del {
+  opacity: 0; transition: opacity 0.2s;
+  background: rgba(193,39,45,0.85); border: none; color: white;
+  border-radius: 2px; font-size: 0.72rem; padding: 3px 8px; cursor: pointer;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+.photo-card:hover .photo-del { opacity: 1; }
+.photo-empty, .video-empty {
+  text-align: center; padding: 3rem; font-size: 0.88rem;
+  color: var(--muted); border: 1px dashed rgba(255,255,255,0.07);
+  border-radius: 4px; max-width: 900px; margin: 0 auto; line-height: 1.7;
+}
+
+/* ── VIDEOS ── */
+.forms-banner {
+  max-width: 680px; margin: 0 auto 2.5rem;
+  background: rgba(42,157,143,0.08); border: 1px solid rgba(42,157,143,0.25);
+  border-radius: 4px; padding: 1.5rem 1.75rem;
+  display: flex; gap: 1.25rem; align-items: flex-start;
+}
+.forms-banner .fb-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 2px; }
+.forms-banner h4 { font-size: 0.88rem; font-weight: 700; color: var(--teal); margin-bottom: 0.4rem; letter-spacing: 0.04em; }
+.forms-banner p { font-size: 0.84rem; color: var(--muted); line-height: 1.65; }
+.forms-banner a { color: var(--teal); text-underline-offset: 3px; }
+.forms-banner ol { margin: 0.6rem 0 0 1rem; }
+.forms-banner ol li { font-size: 0.84rem; color: var(--muted); line-height: 1.7; }
+
+.questions-board {
+  max-width: 680px; margin: 0 auto 2.5rem;
+  background: var(--ink2); border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 4px; overflow: hidden;
+}
+.qb-header {
+  padding: 0.85rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-family: 'Share Tech Mono', monospace; font-size: 0.7rem;
+  letter-spacing: 0.18em; color: var(--red2); text-transform: uppercase;
+}
+.q-items { list-style: none; }
+.q-items li {
+  padding: 0.85rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.04);
+  display: flex; align-items: center; gap: 1rem; font-size: 0.9rem; color: var(--muted);
+  font-weight: 400;
+}
+.q-items li:last-child { border-bottom: none; }
+.q-icon { font-size: 1rem; }
+
+.vid-meta-row {
+  max-width: 680px; margin: 0 auto 1rem;
+  display: flex; gap: 0.65rem; flex-wrap: wrap;
+}
+.vid-meta-row input, .vid-meta-row select {
+  flex: 1; min-width: 140px;
+  padding: 0.6rem 1rem;
+  background: var(--ink2); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 3px; color: var(--paper);
+  font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 0.88rem;
+  outline: none; transition: border-color 0.2s;
+}
+.vid-meta-row input::placeholder { color: var(--muted); }
+.vid-meta-row input:focus, .vid-meta-row select:focus { border-color: var(--red2); }
+.vid-meta-row select option { background: var(--ink2); }
+
+.video-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem; max-width: 900px; margin: 0 auto;
+}
+.video-card {
+  background: var(--ink2); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 4px; overflow: hidden; transition: border-color 0.25s;
+}
+.video-card:hover { border-color: rgba(193,39,45,0.3); }
+.video-thumb {
+  position: relative; aspect-ratio: 16/9; background: #0a0812; cursor: pointer;
+}
+.video-thumb video { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.85; }
+.v-play-overlay {
+  position: absolute; inset: 0; display: flex;
+  align-items: center; justify-content: center;
+  background: rgba(13,10,20,0.35); transition: background 0.2s;
+}
+.video-thumb:hover .v-play-overlay { background: rgba(13,10,20,0.55); }
+.v-play-btn {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--red2); display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 1rem; padding-left: 3px;
+  box-shadow: 0 0 20px rgba(232,69,60,0.45);
+  transition: transform 0.2s;
+}
+.video-thumb:hover .v-play-btn { transform: scale(1.1); }
+.video-info { padding: 0.9rem 1rem; }
+.video-who { font-size: 0.9rem; font-weight: 700; color: var(--paper); margin-bottom: 4px; }
+.video-tag-pill {
+  display: inline-block; font-size: 0.7rem; padding: 2px 10px; border-radius: 2px;
+  background: rgba(193,39,45,0.15); color: var(--red2); font-weight: 700; letter-spacing: 0.05em;
+}
+.vid-del {
+  display: block; width: 100%; padding: 0.5rem;
+  background: none; border: none; border-top: 1px solid rgba(255,255,255,0.05);
+  color: var(--muted); font-size: 0.75rem; cursor: pointer;
+  font-family: 'Zen Kaku Gothic New', sans-serif; transition: all 0.15s;
+}
+.vid-del:hover { color: var(--red2); background: rgba(193,39,45,0.07); }
+
+/* ── FINAL ── */
+.finale {
+  padding: 9rem 2rem; text-align: center; position: relative; z-index: 1; overflow: hidden;
+}
+.finale-bg-text {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  font-family: 'Noto Serif JP', serif; font-size: clamp(6rem,22vw,18rem); font-weight: 900;
+  color: rgba(193,39,45,0.06); white-space: nowrap; line-height: 1; pointer-events: none; user-select: none;
+}
+.finale-torii { font-size: 3rem; margin-bottom: 1.5rem; filter: drop-shadow(0 0 12px rgba(232,69,60,0.3)); }
+.finale h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 700;
+  color: var(--paper); line-height: 1.2; position: relative;
+}
+.finale h2 em { color: var(--red2); font-style: italic; }
+.finale-jp {
+  font-family: 'Noto Serif JP', serif; font-size: clamp(1.1rem, 3vw, 1.8rem);
+  font-weight: 400; color: var(--muted); letter-spacing: 0.35em; margin-top: 1rem; display: block;
+}
+.finale-msg {
+  font-size: 0.95rem; color: var(--muted); font-weight: 400; line-height: 1.8;
+  max-width: 420px; margin: 1.5rem auto 0;
+}
+.finale-line {
+  width: 50px; height: 1px; background: var(--red2);
+  margin: 1.75rem auto; opacity: 0.5;
+}
+
+/* ── LIGHTBOX ── */
+.lightbox {
+  display: none; position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,0.95); align-items: center; justify-content: center;
+}
+.lightbox.open { display: flex; }
+.lightbox video, .lightbox img {
+  max-width: 92vw; max-height: 88vh; border-radius: 3px;
+}
+.lb-close {
+  position: absolute; top: 1.25rem; right: 1.25rem;
+  width: 38px; height: 38px; border-radius: 50%;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+  color: white; font-size: 1rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  transition: background 0.2s;
+}
+.lb-close:hover { background: rgba(193,39,45,0.4); }
+
+/* ── TOAST ── */
+.toast {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 9999;
+  background: var(--ink2); color: var(--paper);
+  border: 1px solid rgba(193,39,45,0.4); border-left: 3px solid var(--red2);
+  padding: 0.85rem 1.25rem; border-radius: 3px; font-size: 0.82rem;
+  max-width: 280px; transform: translateY(20px); opacity: 0;
+  transition: all 0.3s ease; pointer-events: none;
+  font-family: 'Share Tech Mono', monospace; letter-spacing: 0.04em;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* ── SEPARATOR ── */
+.sep {
+  position: relative; z-index: 1; text-align: center;
+  padding: 1rem 0; color: rgba(255,255,255,0.07);
+  font-size: 2rem; letter-spacing: 1.5rem;
+  font-family: 'Noto Serif JP', serif; font-weight: 900;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  nav { padding: 0 1rem; }
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: 0.7rem; }
+  section { padding: 4rem 1.25rem; }
+  .quiz-card { padding: 1.5rem 1rem; }
+  .forms-banner { flex-direction: column; gap: 0.75rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ANIMATED BG -->
+<div class="bg-layer" id="bgLayer">
+  <div class="bg-kanji">誕</div>
+  <div class="bg-kanji">生</div>
+  <div class="bg-kanji">日</div>
+  <div class="bg-kanji">愛</div>
+</div>
+
+<nav>
+  <div class="nav-brand">
+    <span class="nav-torii">⛩</span>
+    <div>
+      <div class="nav-title">Ian · 28</div>
+      <div class="nav-jp">誕生日おめでとう</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#quiz">Quiz</a></li>
+    <li><a href="#fotos">Fotos</a></li>
+    <li><a href="#videos">Depoimentos</a></li>
+    <li><a href="#jogo">Jogo</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-stamp">✦ Edição Especial · 28 Anos · 2026 ✦</div>
+  <span class="hero-jp-big">イアン &nbsp;誕生日</span>
+  <h1>IAN</h1>
+  <div class="hero-sub-row">
+    <div class="hero-age-badge">二十八歳 · 28 ANOS</div>
+    <p class="hero-desc">Uma celebração feita com muito amor por quem mais torce por você.</p>
+  </div>
+  <div class="hero-num">28</div>
+  <div class="scroll-cue">scroll <span>↓</span></div>
+</section>
+
+<div class="sep">✦ ✦ ✦</div>
+
+<!-- QUIZ -->
+<section id="quiz">
+  <div class="s-header">
+    <div class="s-eyebrow">クイズ · Quiz</div>
+    <h2>Quanto você conhece<br>o Ian?
+      <span class="jp">イアンをどのくらい知っていますか</span>
+    </h2>
+    <p class="s-desc">Oito perguntas sobre a vida, gostos e segredos do aniversariante. Você passa de fase?</p>
+    <div class="red-line"></div>
+  </div>
+
+  <div class="quiz-wrap">
+    <div class="quiz-prog-track"><div class="quiz-prog-fill" id="quizBar"></div></div>
+
+    <div class="quiz-card" id="quizCard">
+      <div class="quiz-num" id="quizNum">PERGUNTA 01 / 08</div>
+      <p class="quiz-q" id="quizQ"></p>
+      <div class="quiz-opts" id="quizOpts"></div>
+      <div class="quiz-fb" id="quizFb"></div>
+      <div class="quiz-footer">
+        <span class="quiz-score-txt" id="quizScore">0 / 0</span>
+        <button class="btn-primary" id="quizNext" disabled>次へ → Próxima</button>
+      </div>
+    </div>
+
+    <div class="quiz-result" id="quizResult">
+      <div class="result-kanji" id="resultKanji">合格</div>
+      <div class="result-score" id="resultScore">0 / 8 perguntas certas</div>
+      <div class="result-msg" id="resultMsg"></div>
+      <br><br>
+      <button class="btn-ghost" onclick="startQuiz()">↺ もう一度 · Jogar de novo</button>
+    </div>
+  </div>
+</section>
+
+<div class="sep">桜 桜 桜</div>
+
+<!-- FOTOS -->
+<section id="fotos">
+  <div class="s-header">
+    <div class="s-eyebrow">写真 · Galeria</div>
+    <h2>Momentos que ficam<span class="jp">大切な思い出</span></h2>
+    <p class="s-desc">Adicione fotos do Ian — infância, adolescência, e as melhores aventuras juntos.</p>
+    <div class="red-line"></div>
+  </div>
+
+  <label class="upload-zone" id="photoZone">
+    <input type="file" id="photoInput" accept="image/*" multiple onchange="addPhotos(this.files)">
+    <div class="uz-icon">📸</div>
+    <div class="uz-text"><strong>Clique para adicionar fotos</strong><br>ou arraste aqui · JPG, PNG, WEBP</div>
+  </label>
+
+  <div id="photoGrid" class="photo-grid"></div>
+  <div class="photo-empty" id="photoEmpty">
+    Nenhuma foto ainda.<br>
+    <span style="font-size:0.8rem; opacity:0.6">As fotos ficam salvas enquanto a aba estiver aberta.</span>
+  </div>
+</section>
+
+<div class="sep">✦ ✦ ✦</div>
+
+<!-- PODCAST -->
+<section id="videos">
+  <div class="s-header">
+    <div class="s-eyebrow">ポッドキャスト · Playlist</div>
+    <h2>Ian FM<span class="jp">みんなからのメッセージ</span></h2>
+    <p class="s-desc">Depoimentos em áudio dos amigos e família. Cada episódio, uma história.</p>
+    <div class="red-line"></div>
+  </div>
+
+  <!-- PROMPTS -->
+  <div class="questions-board" style="margin-bottom:2.5rem;">
+    <div class="qb-header">✦ Sugestões de perguntas para gravar</div>
+    <ul class="q-items">
+      <li><span class="q-icon">😂</span> Conta uma memória engraçada que você tem do Ian</li>
+      <li><span class="q-icon">🥹</span> Qual memória emocionante você guarda com ele?</li>
+      <li><span class="q-icon">✨</span> O que você mais admira no Ian?</li>
+      <li><span class="q-icon">🎯</span> Qual sua previsão para os próximos anos da vida dele?</li>
+      <li><span class="q-icon">💌</span> O que você quer dizer pra ele nesse aniversário?</li>
+      <li><span class="q-icon">🏆</span> Qual foi a melhor aventura que vocês viveram juntos?</li>
+    </ul>
+  </div>
+
+  <!-- META + UPLOAD -->
+  <div class="vid-meta-row">
+    <input type="text" id="audioName" placeholder="Nome de quem gravou..." />
+    <select id="audioTag">
+      <option value="">Tipo do depoimento...</option>
+      <option value="Memória engraçada">😂 Memória engraçada</option>
+      <option value="Memória emocionante">🥹 Memória emocionante</option>
+      <option value="O que admira">✨ O que admira no Ian</option>
+      <option value="Previsão">🎯 Previsão pro futuro</option>
+      <option value="Mensagem">💌 Mensagem de aniversário</option>
+      <option value="Aventura juntos">🏆 Aventura juntos</option>
+    </select>
+  </div>
+
+  <label class="upload-zone" id="audioZone" style="max-width:680px;margin-bottom:2.5rem;">
+    <input type="file" id="audioInput" accept="audio/*" onchange="addAudio(this.files[0])">
+    <div class="uz-icon">🎙️</div>
+    <div class="uz-text"><strong>Adicionar áudio de depoimento</strong><br>MP3, M4A, WAV, OGG</div>
+  </label>
+
+  <!-- PLAYER ATUAL -->
+  <div id="nowPlaying" style="display:none;max-width:680px;margin:0 auto 2rem;">
+    <div style="background:var(--ink2);border:1px solid rgba(193,39,45,0.3);border-radius:12px;padding:1.25rem 1.5rem;">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+        <div id="npAvatar" style="width:48px;height:48px;border-radius:50%;background:rgba(193,39,45,0.2);border:1px solid rgba(193,39,45,0.4);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🎙️</div>
+        <div style="flex:1;min-width:0;">
+          <div id="npName" style="font-size:0.95rem;font-weight:700;color:var(--paper);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;"></div>
+          <div id="npTag" style="font-size:0.75rem;color:var(--red2);margin-top:2px;"></div>
+        </div>
+        <div id="npTime" style="font-family:'Share Tech Mono',monospace;font-size:0.78rem;color:var(--muted);flex-shrink:0;">0:00 / 0:00</div>
+      </div>
+      <!-- progress bar -->
+      <div id="npBar" style="height:3px;background:rgba(255,255,255,0.08);border-radius:100px;cursor:pointer;margin-bottom:1rem;position:relative;">
+        <div id="npFill" style="height:100%;background:var(--red2);border-radius:100px;width:0%;transition:width 0.1s linear;"></div>
+      </div>
+      <!-- controls -->
+      <div style="display:flex;align-items:center;justify-content:center;gap:1.5rem;">
+        <button onclick="prevTrack()" style="background:none;border:none;color:var(--muted);font-size:1.1rem;cursor:pointer;padding:4px;transition:color .2s;" title="Anterior">⏮</button>
+        <button onclick="togglePlay()" id="npPlayBtn" style="width:42px;height:42px;border-radius:50%;background:var(--red2);border:none;color:white;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;">▶</button>
+        <button onclick="nextTrack()" style="background:none;border:none;color:var(--muted);font-size:1.1rem;cursor:pointer;padding:4px;transition:color .2s;" title="Próximo">⏭</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLAYLIST -->
+  <div id="playlist" style="max-width:680px;margin:0 auto;display:none;">
+    <div style="background:var(--ink2);border:1px solid rgba(255,255,255,0.06);border-radius:12px;overflow:hidden;">
+      <div style="padding:0.75rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;gap:1rem;align-items:center;">
+        <span style="font-family:'Share Tech Mono',monospace;font-size:0.65rem;letter-spacing:.18em;color:var(--red2);text-transform:uppercase;">✦ Ian FM — Playlist</span>
+        <span id="trackCount" style="font-size:0.75rem;color:var(--muted);margin-left:auto;"></span>
+      </div>
+      <ul id="trackList" style="list-style:none;"></ul>
+    </div>
+  </div>
+
+  <div class="video-empty" id="audioEmpty">
+    Nenhum episódio ainda.<br>
+    <span style="font-size:0.8rem;opacity:0.6;">Adicione áudios acima para montar a playlist.</span>
+  </div>
+</section>
+
+<script>
+(function(){
+  // ── ÁUDIOS PRÉ-CARREGADOS ─────────────────────────────────────────────────
+  // Para adicionar mais áudios, copie o bloco abaixo e edite nome, tag e url
+  const preloaded = [
+    { name: 'Aline', tag: 'Mensagem', url: 'Audio Aline Teste.ogg' },
+  ];
+
+  const tracks = [];
+  let currentIdx = -1;
+  let audioEl = new Audio();
+  let isPlaying = false;
+
+  // avatar initials
+  function initials(name){
+    return name.split(' ').map(w=>w[0]||'').join('').toUpperCase().slice(0,2)||'🎙';
+  }
+
+  // color per tag
+  const tagColors = {
+    'Memória engraçada':'#E8C547',
+    'Memória emocionante':'#FF8FAB',
+    'O que admira':'#5DCAA5',
+    'Previsão':'#85B7EB',
+    'Mensagem':'#F0997B',
+    'Aventura juntos':'#C9B8FF',
+  };
+
+  function addAudio(file){
+    if(!file) return;
+    const name = document.getElementById('audioName').value.trim() || 'Alguém especial';
+    const tag  = document.getElementById('audioTag').value || 'Depoimento';
+    const url  = URL.createObjectURL(file);
+    tracks.push({name, tag, url, duration:'--:--'});
+    // preload duration
+    const tmp = new Audio(url);
+    tmp.addEventListener('loadedmetadata', ()=>{
+      tracks[tracks.length-1].duration = fmt(tmp.duration);
+      renderPlaylist();
+    });
+    renderPlaylist();
+    document.getElementById('audioInput').value='';
+    document.getElementById('audioName').value='';
+    document.getElementById('audioTag').value='';
+    toast('Episódio adicionado! 🎙️');
+    if(currentIdx===-1) loadTrack(0);
+  }
+
+  function fmt(s){
+    if(!isFinite(s)) return '--:--';
+    const m=Math.floor(s/60), sec=Math.floor(s%60);
+    return m+':'+(sec<10?'0':'')+sec;
+  }
+
+  function renderPlaylist(){
+    const list = document.getElementById('trackList');
+    const empty = document.getElementById('audioEmpty');
+    const pl = document.getElementById('playlist');
+    const np = document.getElementById('nowPlaying');
+    const tc = document.getElementById('trackCount');
+    if(!tracks.length){ list.innerHTML=''; pl.style.display='none'; np.style.display='none'; empty.style.display='block'; return; }
+    empty.style.display='none'; pl.style.display='block'; np.style.display='block';
+    tc.textContent = tracks.length + ' episódio' + (tracks.length>1?'s':'');
+    list.innerHTML = tracks.map((t,i)=>{
+      const col = tagColors[t.tag]||'var(--red2)';
+      const active = i===currentIdx;
+      return `<li onclick="loadTrack(${i})" style="display:flex;align-items:center;gap:1rem;padding:0.85rem 1.25rem;border-bottom:1px solid rgba(255,255,255,0.04);cursor:pointer;background:${active?'rgba(193,39,45,0.1)':'transparent'};transition:background .2s;">
+        <div style="width:36px;height:36px;border-radius:50%;background:${col}22;border:1px solid ${col}55;display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:700;color:${col};flex-shrink:0;">${initials(t.name)}</div>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:0.88rem;font-weight:${active?700:400};color:${active?'var(--paper)':'var(--muted)'};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${t.name}</div>
+          <div style="font-size:0.72rem;color:${col};margin-top:2px;">${t.tag}</div>
+        </div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:0.72rem;color:var(--muted);flex-shrink:0;">${t.duration}</div>
+        ${active&&isPlaying?`<div style="color:${col};font-size:0.8rem;">▶</div>`:''}
+        <button onclick="event.stopPropagation();delTrack(${i})" style="background:none;border:none;color:rgba(255,255,255,0.2);font-size:0.75rem;cursor:pointer;padding:4px;flex-shrink:0;transition:color .2s;" onmouseover="this.style.color='var(--red2)'" onmouseout="this.style.color='rgba(255,255,255,0.2)'">✕</button>
+      </li>`;
+    }).join('');
+  }
+
+  function loadTrack(idx){
+    if(idx<0||idx>=tracks.length) return;
+    currentIdx=idx;
+    const t=tracks[idx];
+    audioEl.pause();
+    audioEl=new Audio(t.url);
+    audioEl.addEventListener('timeupdate', updateProgress);
+    audioEl.addEventListener('ended', ()=>{ isPlaying=false; nextTrack(); });
+    audioEl.play(); isPlaying=true;
+    updateNowPlaying();
+    renderPlaylist();
+  }
+
+  function updateNowPlaying(){
+    const t=tracks[currentIdx];
+    if(!t) return;
+    const col=tagColors[t.tag]||'var(--red2)';
+    document.getElementById('npName').textContent=t.name;
+    document.getElementById('npTag').textContent=t.tag;
+    document.getElementById('npPlayBtn').textContent=isPlaying?'⏸':'▶';
+    const av=document.getElementById('npAvatar');
+    av.textContent=initials(t.name);
+    av.style.background=col+'22'; av.style.borderColor=col+'55'; av.style.color=col;
+  }
+
+  function updateProgress(){
+    const t=audioEl.duration, c=audioEl.currentTime;
+    if(!isFinite(t)) return;
+    document.getElementById('npFill').style.width=(c/t*100)+'%';
+    document.getElementById('npTime').textContent=fmt(c)+' / '+fmt(t);
+  }
+
+  // click on progress bar to seek
+  document.getElementById('npBar').addEventListener('click',function(e){
+    const r=this.getBoundingClientRect();
+    const pct=(e.clientX-r.left)/r.width;
+    if(isFinite(audioEl.duration)) audioEl.currentTime=pct*audioEl.duration;
+  });
+
+  window.togglePlay=function(){
+    if(!tracks.length) return;
+    if(currentIdx===-1) loadTrack(0);
+    if(isPlaying){ audioEl.pause(); isPlaying=false; }
+    else { audioEl.play(); isPlaying=true; }
+    document.getElementById('npPlayBtn').textContent=isPlaying?'⏸':'▶';
+    renderPlaylist();
+  };
+  window.nextTrack=function(){ loadTrack((currentIdx+1)%tracks.length); };
+  window.prevTrack=function(){ loadTrack((currentIdx-1+tracks.length)%tracks.length); };
+  window.delTrack=function(i){
+    if(i===currentIdx){ audioEl.pause(); isPlaying=false; currentIdx=-1; }
+    else if(i<currentIdx) currentIdx--;
+    tracks.splice(i,1);
+    renderPlaylist();
+    if(!tracks.length){ document.getElementById('nowPlaying').style.display='none'; }
+  };
+  window.addAudio=addAudio;
+
+  // drag & drop
+  const az=document.getElementById('audioZone');
+  az.addEventListener('dragover',e=>{e.preventDefault();az.style.borderColor='var(--red2)';});
+  az.addEventListener('dragleave',()=>az.style.borderColor='');
+  az.addEventListener('drop',e=>{e.preventDefault();az.style.borderColor='';addAudio(e.dataTransfer.files[0]);});
+
+  // carregar áudios pré-definidos
+  preloaded.forEach(p=>{
+    tracks.push({name:p.name, tag:p.tag, url:p.url, duration:'--:--'});
+    const tmp=new Audio(p.url);
+    const idx=tracks.length-1;
+    tmp.addEventListener('loadedmetadata',()=>{ tracks[idx].duration=fmt(tmp.duration); renderPlaylist(); });
+  });
+
+  renderPlaylist();
+  if(tracks.length) loadTrack(0);
+})();
+</script>
+
+<!-- JOGO -->
+<div class="sep">ゲーム · 遊ぼう</div>
+<section id="jogo">
+  <div class="s-header">
+    <div class="s-eyebrow">ゲーム · Joguinho</div>
+    <h2>Ian Run!<span class="jp">走れ、イアン！</span></h2>
+    <p class="s-desc">Ajude o Ian chibi a desviar dos obstáculos! Espaço ou toque para pular — duplo pulo permitido.</p>
+    <div class="red-line"></div>
+  </div>
+
+  <div style="max-width:700px;margin:0 auto;">
+    <div id="gw" style="background:#1A0A2E;border-radius:16px;overflow:hidden;font-family:monospace;user-select:none;border:1px solid rgba(255,120,170,0.2);">
+      <div id="hud" style="display:flex;justify-content:space-between;align-items:center;padding:8px 16px;background:rgba(0,0,0,0.4);border-bottom:1px solid rgba(255,150,180,0.3);">
+        <span id="livesEl" style="font-size:13px;color:#FF6B9D;letter-spacing:3px;">♥ ♥ ♥</span>
+        <span id="scoreEl" style="font-size:13px;color:#FFD6E8;font-weight:700;letter-spacing:.1em;">✦ 0</span>
+        <span id="hiEl" style="font-size:13px;color:#888;letter-spacing:.08em;">BEST: 0</span>
+      </div>
+      <canvas id="gc" height="200" style="display:block;width:100%;"></canvas>
+      <div id="gameOverlay" style="display:flex;flex-direction:column;align-items:center;gap:12px;padding:20px;background:rgba(26,10,46,0.97);border-top:1px solid rgba(255,150,180,0.2);">
+        <div style="color:#FF6B9D;font-size:18px;font-weight:700;letter-spacing:.05em;" id="overlayTitle">⛩ IAN RUN ⛩</div>
+        <div style="color:#C9A8D4;font-size:12px;letter-spacing:.08em;text-align:center;line-height:1.7;" id="overlayMsg">ESPAÇO ou TOQUE para pular<br>Duplo pulo permitido! 🌸</div>
+        <button id="playBtn" style="background:#C1272D;color:#fff;border:none;padding:10px 32px;border-radius:100px;font-family:monospace;font-size:13px;font-weight:700;letter-spacing:.12em;cursor:pointer;">▶ JOGAR</button>
+        <span style="color:#666;font-size:11px;letter-spacing:.1em;">イアン、がんばれ！ 🌸</span>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center;gap:1.5rem;margin-top:1.25rem;flex-wrap:wrap;">
+      <span style="font-size:0.8rem;color:var(--muted);display:flex;align-items:center;gap:6px;">
+        <span style="display:inline-block;width:10px;height:18px;background:#C1272D;border-radius:1px;"></span> Torii — morte instantânea
+      </span>
+      <span style="font-size:0.8rem;color:var(--muted);display:flex;align-items:center;gap:6px;">
+        <span style="display:inline-block;width:13px;height:13px;background:#B0BEC5;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)"></span> Shuriken — -1 vida
+      </span>
+      <span style="font-size:0.8rem;color:var(--muted);display:flex;align-items:center;gap:6px;">
+        <span style="display:inline-block;width:15px;height:15px;background:#FFB7C5;border-radius:50%;"></span> Sakura voando — +10 pts (pule!)
+      </span>
+      <span style="font-size:0.8rem;color:var(--muted);display:flex;align-items:center;gap:6px;">
+        <span style="display:inline-block;width:15px;height:15px;background:#F8F8F8;border-radius:50%;border:1px solid #FFD700;"></span> Maneki-neko raro — +50 pts + vida
+      </span>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+const cv=document.getElementById('gc');
+const cx=cv.getContext('2d');
+const W=680,H=200;
+cv.width=W;cv.height=H;
+
+// Layout
+const GROUND=H-38;       // ground Y (feet land here)
+const IAN_H=52,IAN_W=38; // hitbox
+
+// Physics — SLOWER than before
+const GRAV=0.48;
+const J1=-11.5, J2=-9.5; // jump forces
+
+// Game state
+let state='idle',score=0,hi=0,lives=3,fr=0,spd=3.0,spawnT=0,invTimer=0;
+let obs=[],ptcl=[],stars=[],floaters=[],txt3d=[],animId;
+
+const IAN={x:80,y:GROUND,vy:0,jumps:0,legP:0,squish:1,squishV:0,blink:0,blinkT:140};
+
+// Stars & floaters for BG
+for(let i=0;i<38;i++) stars.push({x:Math.random()*W,y:Math.random()*(H*.65),r:Math.random()*1.4+.3,tw:Math.random()*Math.PI*2});
+for(let i=0;i<5;i++) floaters.push({x:Math.random()*W,y:18+Math.random()*44,sp:0.25+Math.random()*.35,w:55+Math.random()*55});
+
+// ── HUD ──────────────────────────────────────────────────────────────────────
+function hud(){
+  document.getElementById('scoreEl').textContent='✦ '+score;
+  document.getElementById('hiEl').textContent='BEST: '+hi;
+  const h=lives>0?'♥ '.repeat(lives).trim():'💀';
+  document.getElementById('livesEl').textContent=h;
+}
+
+// ── JUMP ─────────────────────────────────────────────────────────────────────
+function jump(){
+  if(state==='idle'||state==='dead'){go();return;}
+  if(IAN.jumps<2){
+    IAN.vy=IAN.jumps===0?J1:J2;
+    IAN.jumps++;
+    IAN.squish=0.72; IAN.squishV=0.07;
+    burst(IAN.x+IAN_W/2, IAN.y+IAN_H, 'jump');
+  }
+}
+
+function go(){
+  reset(); state='running';
+  document.getElementById('gameOverlay').style.display='none';
+  loop();
+}
+
+document.getElementById('playBtn').addEventListener('click', go);
+document.addEventListener('keydown', e=>{
+  if(e.code==='Space'||e.code==='ArrowUp'){e.preventDefault(); jump();}
+});
+cv.addEventListener('click', jump);
+cv.addEventListener('touchstart', e=>{e.preventDefault(); jump();},{passive:false});
+
+// ── RESET ────────────────────────────────────────────────────────────────────
+function reset(){
+  IAN.y=GROUND; IAN.vy=0; IAN.jumps=0; IAN.legP=0;
+  IAN.squish=1; IAN.squishV=0; IAN.blink=0; IAN.blinkT=140;
+  obs=[]; ptcl=[]; txt3d=[]; fr=0; score=0; spd=3.0; spawnT=0; lives=3; invTimer=0;
+  hud();
+}
+
+// ── PARTICLES ────────────────────────────────────────────────────────────────
+function burst(x,y,type){
+  const palettes={
+    jump:['#FFB3C6','#FFF0A0','#D4B8FF'],
+    hit: ['#FF4466','#FF8800','#fff','#FFD700'],
+    sakura:['#FFB7C5','#FF90AA','#FFF','#FFE066'],
+    neko: ['#FFD700','#FFF','#FF6B9D','#FFE066']
+  };
+  const n=type==='hit'?20:type==='neko'?18:12;
+  const pal=palettes[type]||palettes.jump;
+  for(let i=0;i<n;i++){
+    const a=Math.random()*Math.PI*2, s=(type==='hit'?2:1)+Math.random()*5;
+    ptcl.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-(type==='hit'?3:2),
+      life:1,maxLife:1,size:2+Math.random()*5,
+      col:pal[Math.floor(Math.random()*pal.length)],
+      shape:Math.random()>.4?'c':'star'});
+  }
+}
+
+function floatText(x,y,txt,col){
+  txt3d.push({x,y,txt,col,life:1,vy:-1.8});
+}
+
+// ── SPAWN ─────────────────────────────────────────────────────────────────────
+// Types:
+//  torii   — ground obstacle, kill on touch (like big cactus)
+//  shuriken— ground obstacle, -1 life on touch
+//  sakura  — FLOATING collectible (high up), +10 pts on touch
+//  neko    — RARE floating collectible, +50 pts + life restore
+
+function spawnNext(){
+  // Neko: very rare — ~8% chance but only after score>200
+  const nekoOk = score>200 && Math.random()<0.08;
+  if(nekoOk){ spawnNeko(); return; }
+
+  // Danger (ground) vs collectible (air): 60/40 split
+  if(Math.random()<0.62){
+    // Ground danger: torii or shuriken
+    if(Math.random()<0.5) spawnTorii(); else spawnShuriken();
+  } else {
+    spawnSakura();
+  }
+}
+
+function spawnTorii(){
+  // Torii: rooted at ground, top reaches up — Ian MUST jump over it
+  // y = ground line minus full height so feet are at ground
+  const groundLine = GROUND + IAN_H; // where feet touch
+  obs.push({type:'torii', x:W+20, y:groundLine-68, w:38, h:68, danger:true, lethal:true, bob:0, bobV:0, spin:0});
+}
+
+function spawnShuriken(){
+  // Shuriken: sitting on ground — shorter, Ian MUST jump
+  const groundLine = GROUND + IAN_H;
+  obs.push({type:'shuriken', x:W+20, y:groundLine-26, w:26, h:26, danger:true, lethal:false, bob:0, bobV:0, spin:0});
+}
+
+function spawnSakura(){
+  // Sakura: floating HIGH — must jump to collect (+10 pts)
+  const flyH = 60+Math.random()*55; // 60-115px above ground
+  obs.push({type:'sakura',x:W+20,y:GROUND-flyH,w:22,h:22,danger:false,lethal:false,rot:0,bob:0,bobV:Math.random()*Math.PI*2,spin:0});
+}
+
+function spawnNeko(){
+  // Neko: floating medium height — jump to collect (+50 pts)
+  const flyH=45+Math.random()*40;
+  obs.push({type:'neko',x:W+20,y:GROUND-flyH,w:36,h:44,danger:false,lethal:false,rot:0,bob:0,bobV:Math.random()*Math.PI*2,spin:0});
+}
+
+// ── UPDATE ────────────────────────────────────────────────────────────────────
+function update(){
+  fr++; score++; hud();
+  // Speed increases slowly — max ~5.5
+  spd = Math.min(5.5, 3.0 + score/900);
+  if(invTimer>0) invTimer--;
+
+  // Ian physics
+  IAN.vy += GRAV;
+  IAN.y  += IAN.vy;
+  if(IAN.y >= GROUND){ IAN.y=GROUND; IAN.vy=0; IAN.jumps=0; }
+  IAN.legP = IAN.y < GROUND ? 0 : IAN.legP+0.20;
+
+  // Squish spring
+  IAN.squish += (1-IAN.squish)*0.16 + IAN.squishV;
+  IAN.squishV *= 0.82;
+
+  // Blink timer
+  if(--IAN.blinkT<=0){ IAN.blink=7; IAN.blinkT=Math.floor(130+Math.random()*190); }
+  if(IAN.blink>0) IAN.blink--;
+
+  // BG
+  stars.forEach(s=>s.tw+=0.035);
+  floaters.forEach(f=>{ f.x-=f.sp; if(f.x<-130) f.x=W+60; });
+
+  // Obstacles
+  obs.forEach(o=>{
+    o.x -= spd;
+    if(o.type==='sakura'||o.type==='neko'){
+      o.bobV+=0.06; o.bob=Math.sin(o.bobV)*4;
+    }
+    if(o.type==='shuriken') o.spin+=0.14;
+  });
+  obs = obs.filter(o=>o.x > -70);
+
+  // Particles
+  ptcl.forEach(p=>{ p.x+=p.vx; p.y+=p.vy; p.vy+=0.14; p.life-=0.038; });
+  ptcl = ptcl.filter(p=>p.life>0);
+
+  // Floating texts
+  txt3d.forEach(t=>{ t.y+=t.vy; t.life-=0.03; });
+  txt3d = txt3d.filter(t=>t.life>0);
+
+  // Spawn timer
+  spawnT--;
+  if(spawnT<=0){
+    spawnNext();
+    // Interval: slower at start, never too fast
+    spawnT = Math.max(55, Math.floor(85+Math.random()*80 - spd*6));
+  }
+
+  // Collision — Ian hitbox: horizontal slim, full vertical height
+  const ix = IAN.x + 8;           // left edge (slim sides)
+  const iw = IAN_W - 14;          // width
+  const iy = IAN.y + 6;           // top of head
+  const ih = IAN_H + 2;           // full height to feet
+  for(let i=obs.length-1;i>=0;i--){
+    const o = obs[i];
+    const oy = o.y + (o.bob||0);
+    const overlap = ix < o.x+o.w-3 && ix+iw > o.x+3 && iy < oy+o.h-2 && iy+ih > oy+2;
+    if(!overlap) continue;
+    if(o.danger){
+      if(invTimer>0) continue;
+      obs.splice(i,1);
+      burst(IAN.x+IAN_W/2, IAN.y+IAN_H/2, 'hit');
+      lives--; hud();
+      if(o.lethal||lives<=0){ die(); return; }
+      invTimer=90;
+      IAN.squish=1.5; IAN.squishV=-0.1;
+      floatText(IAN.x+10, IAN.y-8, '-1 ♥', '#FF4466');
+    } else {
+      obs.splice(i,1);
+      if(o.type==='sakura'){
+        score+=10; burst(o.x+11,oy+11,'sakura');
+        floatText(o.x, oy-10, '+10', '#FFB7C5');
+      } else if(o.type==='neko'){
+        score+=50;
+        if(lives<3) lives++;
+        burst(o.x+18,oy+22,'neko');
+        floatText(o.x, oy-10, '+50!', '#FFD700');
+      }
+      hud();
+    }
+  }
+}
+
+// ── DIE ───────────────────────────────────────────────────────────────────────
+function die(){
+  state='dead'; if(score>hi) hi=score;
+  cancelAnimationFrame(animId);
+  setTimeout(()=>{
+    document.getElementById('gameOverlay').style.display='flex';
+    document.getElementById('overlayTitle').textContent=
+      score>600?'✨ SUGOI! ✨':score>300?'よくできました！':score>100?'がんばった！':'あら... また？';
+    document.getElementById('overlayMsg').textContent=
+      'Score: '+score+'  •  Best: '+hi+'\n\nTente de novo, Ian-kun! 🌸';
+    document.getElementById('playBtn').textContent='↺ JOGAR DE NOVO';
+  },800);
+}
+
+// ── DRAW BG ───────────────────────────────────────────────────────────────────
+function dBG(){
+  cx.fillStyle='#1A0A2E'; cx.fillRect(0,0,W,H);
+  // stars
+  stars.forEach(s=>{
+    cx.fillStyle=`rgba(255,215,235,${0.35+Math.sin(s.tw)*0.3})`;
+    cx.beginPath(); cx.arc(s.x,s.y,s.r,0,Math.PI*2); cx.fill();
+  });
+  // cloud wisps
+  floaters.forEach(f=>{
+    cx.fillStyle='rgba(255,170,205,0.06)';
+    cx.beginPath(); cx.ellipse(f.x,f.y,f.w/2,11,0,0,Math.PI*2); cx.fill();
+    cx.beginPath(); cx.ellipse(f.x+18,f.y-7,f.w/3,9,0,0,Math.PI*2); cx.fill();
+  });
+  // ground line
+  cx.strokeStyle='rgba(255,110,160,0.55)'; cx.lineWidth=2;
+  cx.beginPath(); cx.moveTo(0,GROUND+IAN_H); cx.lineTo(W,GROUND+IAN_H); cx.stroke();
+  // ground dashes
+  cx.strokeStyle='rgba(255,110,160,0.11)'; cx.lineWidth=1;
+  for(let i=0;i<W;i+=48){
+    const off=(fr*spd*0.38)%48;
+    cx.beginPath(); cx.moveTo(i-off,GROUND+IAN_H+8); cx.lineTo(i-off+22,GROUND+IAN_H+8); cx.stroke();
+  }
+}
+
+// ── DRAW IAN ─────────────────────────────────────────────────────────────────
+function dIan(){
+  const x=IAN.x, air=IAN.y<GROUND-1;
+  const sy=IAN.squish, sx=2-sy;
+  // Flicker when invincible
+  if(invTimer>0 && Math.floor(invTimer/5)%2===0) return;
+
+  cx.save();
+  cx.translate(x+IAN_W/2, IAN.y+IAN_H/2);
+  cx.scale(sx,sy);
+  cx.translate(-IAN_W/2,-IAN_H/2);
+
+  // shadow
+  if(!air){
+    cx.fillStyle='rgba(255,80,140,0.13)';
+    cx.beginPath(); cx.ellipse(IAN_W/2, IAN_H+3, 14,4,0,0,Math.PI*2); cx.fill();
+  }
+
+  const ls=Math.sin(IAN.legP)*7, as=Math.sin(IAN.legP+Math.PI)*5;
+
+  // LEGS
+  cx.strokeStyle='#FF8FAB'; cx.lineWidth=5; cx.lineCap='round';
+  if(!air){
+    cx.beginPath(); cx.moveTo(14,40); cx.lineTo(10+ls,52); cx.stroke();
+    cx.beginPath(); cx.moveTo(24,40); cx.lineTo(28-ls,52); cx.stroke();
+    // shoes
+    cx.fillStyle='#FF4D6D';
+    cx.beginPath(); cx.roundRect(5+ls,49,12,7,3); cx.fill();
+    cx.beginPath(); cx.roundRect(22-ls,49,12,7,3); cx.fill();
+    // arms
+    cx.beginPath(); cx.moveTo(10,28); cx.lineTo(3+as,39); cx.stroke();
+    cx.beginPath(); cx.moveTo(28,28); cx.lineTo(35-as,39); cx.stroke();
+  } else {
+    cx.beginPath(); cx.moveTo(14,40); cx.lineTo(5,54); cx.stroke();
+    cx.beginPath(); cx.moveTo(24,40); cx.lineTo(33,54); cx.stroke();
+    cx.fillStyle='#FF4D6D';
+    cx.beginPath(); cx.roundRect(1,51,12,7,3); cx.fill();
+    cx.beginPath(); cx.roundRect(25,51,12,7,3); cx.fill();
+    cx.beginPath(); cx.moveTo(10,28); cx.lineTo(1,20); cx.stroke();
+    cx.beginPath(); cx.moveTo(28,28); cx.lineTo(37,20); cx.stroke();
+  }
+
+  // BODY
+  cx.fillStyle='#111827'; cx.beginPath(); cx.roundRect(7,22,25,22,3); cx.fill();
+  cx.fillStyle='#E8453C'; cx.fillRect(9,24,23,5);
+  cx.fillStyle='#FF6B35'; cx.fillRect(9,29,23,13);
+  cx.fillStyle='#0a0a0a'; cx.fillRect(10,35,6,8); cx.fillRect(22,35,6,8);
+
+  // HEAD
+  cx.fillStyle='#F5D6B8'; cx.beginPath(); cx.ellipse(19,14,14,15,0,0,Math.PI*2); cx.fill();
+
+  // HAIR (castanho escuro)
+  cx.fillStyle='#5C3215';
+  cx.beginPath(); cx.moveTo(5,10); cx.bezierCurveTo(5,-3,33,-3,33,10); cx.bezierCurveTo(31,3,7,3,5,10); cx.fill();
+  cx.beginPath(); cx.ellipse(6,13,4.5,7,-0.3,0,Math.PI*2); cx.fill();
+  cx.beginPath(); cx.ellipse(32,13,4.5,7,0.3,0,Math.PI*2); cx.fill();
+  cx.beginPath(); cx.moveTo(5,8); cx.bezierCurveTo(5,-5,33,-5,33,8); cx.fill();
+
+  // EYES (castanhos)
+  const blk=IAN.blink>0&&IAN.blink<6;
+  if(!blk){
+    cx.fillStyle='#fff';
+    cx.beginPath(); cx.ellipse(13,14,5,5.5,0,0,Math.PI*2); cx.fill();
+    cx.beginPath(); cx.ellipse(25,14,5,5.5,0,0,Math.PI*2); cx.fill();
+    // iris castanha
+    cx.fillStyle='#7B4A20';
+    cx.beginPath(); cx.arc(13.5,14.5,3.5,0,Math.PI*2); cx.fill();
+    cx.beginPath(); cx.arc(25.5,14.5,3.5,0,Math.PI*2); cx.fill();
+    // pupila
+    cx.fillStyle='#1a0800';
+    cx.beginPath(); cx.arc(14,15,2,0,Math.PI*2); cx.fill();
+    cx.beginPath(); cx.arc(26,15,2,0,Math.PI*2); cx.fill();
+    // brilho
+    cx.fillStyle='#fff';
+    cx.beginPath(); cx.arc(14.8,13.6,1,0,Math.PI*2); cx.fill();
+    cx.beginPath(); cx.arc(26.8,13.6,1,0,Math.PI*2); cx.fill();
+    // reflexo castanho dourado
+    cx.fillStyle='rgba(180,120,60,0.35)';
+    cx.beginPath(); cx.arc(13,15.5,1.4,0,Math.PI*2); cx.fill();
+    cx.beginPath(); cx.arc(25,15.5,1.4,0,Math.PI*2); cx.fill();
+  } else {
+    cx.strokeStyle='#7B4A20'; cx.lineWidth=2.5; cx.lineCap='round';
+    cx.beginPath(); cx.arc(13,14,4.5,Math.PI+0.3,Math.PI*2-0.3); cx.stroke();
+    cx.beginPath(); cx.arc(25,14,4.5,Math.PI+0.3,Math.PI*2-0.3); cx.stroke();
+  }
+
+  // bochechas rosa
+  cx.fillStyle='rgba(255,155,175,0.65)';
+  cx.beginPath(); cx.ellipse(7,18,3.5,2.5,0,0,Math.PI*2); cx.fill();
+  cx.beginPath(); cx.ellipse(31,18,3.5,2.5,0,0,Math.PI*2); cx.fill();
+
+  // sorriso
+  cx.strokeStyle='#8B5A6A'; cx.lineWidth=1.5;
+  cx.beginPath(); cx.moveTo(15,20); cx.quadraticCurveTo(19,23,23,20); cx.stroke();
+
+  // HEADSET
+  cx.strokeStyle='#333'; cx.lineWidth=3; cx.lineCap='round';
+  cx.beginPath(); cx.moveTo(4,8); cx.lineTo(4,15); cx.stroke();
+  cx.beginPath(); cx.moveTo(34,8); cx.lineTo(34,15); cx.stroke();
+  cx.fillStyle='#222';
+  cx.beginPath(); cx.arc(4,8,5,0,Math.PI*2); cx.fill();
+  cx.beginPath(); cx.arc(34,8,5,0,Math.PI*2); cx.fill();
+  cx.fillStyle='#555';
+  cx.beginPath(); cx.arc(4,8,2.5,0,Math.PI*2); cx.fill();
+  cx.beginPath(); cx.arc(34,8,2.5,0,Math.PI*2); cx.fill();
+  cx.strokeStyle='#2a2a2a'; cx.lineWidth=1.8;
+  cx.beginPath(); cx.arc(19,4,17,Math.PI+0.45,Math.PI*2-0.45); cx.stroke();
+
+  cx.restore();
+}
+
+// ── DRAW OBSTACLES ────────────────────────────────────────────────────────────
+function dTorii(o){
+  const x=o.x, y=o.y;
+  // pillars — from top of gate down to ground
+  cx.fillStyle='#C1272D'; cx.fillRect(x+2,y+14,9,o.h-14); cx.fillRect(x+27,y+14,9,o.h-14);
+  // highlight on pillars
+  cx.fillStyle='rgba(255,180,180,0.22)'; cx.fillRect(x+3,y+14,3,o.h-14); cx.fillRect(x+28,y+14,3,o.h-14);
+  // top crossbar
+  cx.fillStyle='#D63031';
+  cx.beginPath(); cx.roundRect(x-4,y,46,9,2); cx.fill();
+  cx.beginPath(); cx.roundRect(x+1,y+7,36,7,1); cx.fill();
+  // mid crossbar
+  cx.fillStyle='#C1272D'; cx.fillRect(x+5,y+24,28,5);
+}
+
+function dShuriken(o){
+  const sx=o.x+13, sy=o.y+13;
+  cx.save(); cx.translate(sx,sy); cx.rotate(o.spin);
+  cx.fillStyle='#B0BEC5';
+  for(let i=0;i<4;i++){
+    cx.save(); cx.rotate(i*Math.PI/2);
+    cx.beginPath(); cx.moveTo(0,-3); cx.lineTo(5,-14); cx.lineTo(0,-12); cx.lineTo(-5,-14); cx.closePath();
+    cx.fill(); cx.restore();
+  }
+  cx.fillStyle='#CFD8DC'; cx.beginPath(); cx.arc(0,0,5,0,Math.PI*2); cx.fill();
+  cx.fillStyle='#90A4AE'; cx.beginPath(); cx.arc(0,0,2.5,0,Math.PI*2); cx.fill();
+  cx.restore();
+}
+
+function dSakura(o){
+  const sx=o.x+11, sy=o.y+11+o.bob;
+  cx.save(); cx.translate(sx,sy); cx.rotate(o.spin);
+  const pc=['#FFB7C5','#FF90AA','#FFCDD8','#F48FB1','#FFC8D5'];
+  for(let i=0;i<5;i++){
+    cx.save(); cx.rotate(i*Math.PI*2/5);
+    cx.fillStyle=pc[i%pc.length];
+    cx.beginPath(); cx.ellipse(0,-7,4,7.5,-0.1,0,Math.PI*2); cx.fill();
+    cx.restore();
+  }
+  cx.fillStyle='#FFE066'; cx.beginPath(); cx.arc(0,0,3.5,0,Math.PI*2); cx.fill();
+  cx.fillStyle='#FFF9C4'; cx.beginPath(); cx.arc(0,0,1.8,0,Math.PI*2); cx.fill();
+  // glow ring to signal "collect me!"
+  cx.strokeStyle='rgba(255,200,220,0.35)'; cx.lineWidth=2;
+  cx.beginPath(); cx.arc(0,0,11,0,Math.PI*2); cx.stroke();
+  cx.restore();
+}
+
+function dNeko(o){
+  const x=o.x, y=o.y+o.bob;
+  // body
+  cx.fillStyle='#F8F8F8';
+  cx.beginPath(); cx.ellipse(x+18,y+28,15,17,0,0,Math.PI*2); cx.fill();
+  cx.beginPath(); cx.ellipse(x+18,y+12,11,11,0,0,Math.PI*2); cx.fill();
+  // ears
+  cx.fillStyle='#F8F8F8';
+  cx.beginPath(); cx.moveTo(x+8,y+6); cx.lineTo(x+4,y-5); cx.lineTo(x+14,y+2); cx.closePath(); cx.fill();
+  cx.beginPath(); cx.moveTo(x+28,y+6); cx.lineTo(x+32,y-5); cx.lineTo(x+22,y+2); cx.closePath(); cx.fill();
+  cx.fillStyle='#FFCDD2';
+  cx.beginPath(); cx.moveTo(x+9,y+5); cx.lineTo(x+6,y-2); cx.lineTo(x+13,y+3); cx.closePath(); cx.fill();
+  cx.beginPath(); cx.moveTo(x+27,y+5); cx.lineTo(x+30,y-2); cx.lineTo(x+23,y+3); cx.closePath(); cx.fill();
+  // eyes
+  cx.fillStyle='#2d1b00';
+  cx.beginPath(); cx.arc(x+14,y+11,3,0,Math.PI*2); cx.fill();
+  cx.beginPath(); cx.arc(x+22,y+11,3,0,Math.PI*2); cx.fill();
+  cx.fillStyle='#FFD700';
+  cx.beginPath(); cx.ellipse(x+14,y+11,1.1,2.7,0,0,Math.PI*2); cx.fill();
+  cx.beginPath(); cx.ellipse(x+22,y+11,1.1,2.7,0,0,Math.PI*2); cx.fill();
+  // blush
+  cx.fillStyle='rgba(255,150,180,0.5)';
+  cx.beginPath(); cx.ellipse(x+10,y+15,3,2,0,0,Math.PI*2); cx.fill();
+  cx.beginPath(); cx.ellipse(x+26,y+15,3,2,0,0,Math.PI*2); cx.fill();
+  // whiskers
+  cx.strokeStyle='rgba(200,200,200,0.8)'; cx.lineWidth=1; cx.lineCap='round';
+  [[x+11,y+14,x+2,y+11],[x+11,y+15.5,x+2,y+15.5],[x+25,y+14,x+34,y+11],[x+25,y+15.5,x+34,y+15.5]].forEach(([x1,y1,x2,y2])=>{cx.beginPath();cx.moveTo(x1,y1);cx.lineTo(x2,y2);cx.stroke();});
+  // gold plate
+  cx.fillStyle='#FFD700';
+  cx.beginPath(); cx.roundRect(x+5,y+28,26,17,4); cx.fill();
+  cx.fillStyle='#E65100'; cx.font='bold 10px sans-serif'; cx.textAlign='center';
+  cx.fillText('招財',x+18,y+40);
+  // collar
+  cx.fillStyle='#F44336';
+  cx.beginPath(); cx.roundRect(x+8,y+20,20,5,2); cx.fill();
+  cx.fillStyle='#FFD700'; cx.beginPath(); cx.arc(x+18,y+22,2.5,0,Math.PI*2); cx.fill();
+  // tail
+  cx.strokeStyle='#E0E0E0'; cx.lineWidth=3.5;
+  cx.beginPath(); cx.moveTo(x+30,y+18); cx.quadraticCurveTo(x+44,y+10,x+38,y+32); cx.stroke();
+  // glow ring
+  cx.strokeStyle='rgba(255,215,0,0.3)'; cx.lineWidth=2.5;
+  cx.beginPath(); cx.arc(x+18,y+20,22,0,Math.PI*2); cx.stroke();
+}
+
+function dPtcl(){
+  ptcl.forEach(p=>{
+    cx.globalAlpha=p.life;
+    cx.fillStyle=p.col;
+    if(p.shape==='star'){
+      cx.save(); cx.translate(p.x,p.y);
+      cx.beginPath();
+      for(let i=0;i<5;i++){
+        cx.lineTo(Math.cos((i*4*Math.PI/5)-Math.PI/2)*p.size*p.life, Math.sin((i*4*Math.PI/5)-Math.PI/2)*p.size*p.life);
+      }
+      cx.closePath(); cx.fill(); cx.restore();
+    } else {
+      cx.beginPath(); cx.arc(p.x,p.y,p.size*p.life,0,Math.PI*2); cx.fill();
+    }
+  });
+  cx.globalAlpha=1;
+}
+
+function dTxt(){
+  txt3d.forEach(t=>{
+    cx.globalAlpha=t.life;
+    cx.fillStyle=t.col;
+    cx.font='bold 13px monospace';
+    cx.textAlign='center';
+    cx.fillText(t.txt, t.x, t.y);
+  });
+  cx.globalAlpha=1; cx.textAlign='left';
+}
+
+// ── DRAW GUIDE ────────────────────────────────────────────────────────────────
+function dGuide(){
+  // mini legend top-right
+  cx.font='10px monospace'; cx.textAlign='right'; cx.fillStyle='rgba(255,200,220,0.55)';
+  cx.fillText('🌸 pule pra pegar  |  ⛩ 手裏剣 = perigo', W-8, 14);
+  cx.textAlign='left';
+}
+
+// ── MAIN DRAW ─────────────────────────────────────────────────────────────────
+function draw(){
+  cx.clearRect(0,0,W,H);
+  dBG();
+  obs.forEach(o=>{
+    if(o.type==='torii')    dTorii(o);
+    else if(o.type==='shuriken') dShuriken(o);
+    else if(o.type==='sakura')   dSakura(o);
+    else                         dNeko(o);
+  });
+  dPtcl();
+  dIan();
+  dTxt();
+  if(state==='running') dGuide();
+}
+
+function loop(){ update(); draw(); animId=requestAnimationFrame(loop); }
+
+reset(); draw();
+})();
+</script>
+
+<!-- FINALE -->
+<div class="sep">⛩ 愛 ⛩</div>
+<section class="finale" id="mensagem">
+  <div class="finale-bg-text">28歳</div>
+  <div class="finale-torii">⛩</div>
+  <h2>Feliz aniversário,<br><em>Ian.</em></h2>
+  <span class="finale-jp">イアン、誕生日おめでとう</span>
+  <div class="finale-line"></div>
+  <p class="finale-msg">Que os seus 28 sejam cheios das histórias, aventuras e pessoas que fazem seus olhos brilharem. Com muito amor.</p>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLb(event)">
+  <button class="lb-close" onclick="closeLb()">✕</button>
+  <video id="lbVid" controls style="display:none"></video>
+  <img id="lbImg" style="display:none" alt="">
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ── SAKURA PETALS (SVG, forma realista) ───────────────────────────────────
+(function() {
+  const bg = document.getElementById('bgLayer');
+  const colors = ['#F9D0D8','#F4A7B0','#FFCDD8','#F7B8C4','#FFE0E8'];
+  for (let i = 0; i < 22; i++) {
+    const size = 7 + Math.random() * 10;
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    const dur = 9 + Math.random() * 14;
+    const delay = -Math.random() * 25;
+    const left = Math.random() * 105;
+
+    // SVG de pétala de sakura (5 pétalas arredondadas)
+    const ns = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('width', size * 2.6);
+    svg.setAttribute('height', size * 2.6);
+    svg.setAttribute('viewBox', '-13 -13 26 26');
+    svg.style.cssText = `position:absolute;left:${left}%;top:0;animation:fall ${dur}s ${delay}s linear infinite;opacity:0;`;
+
+    // 5 pétalas em volta do centro
+    for (let p = 0; p < 5; p++) {
+      const angle = (p * 72) * Math.PI / 180;
+      const ellipse = document.createElementNS(ns, 'ellipse');
+      ellipse.setAttribute('cx', Math.sin(angle) * 5);
+      ellipse.setAttribute('cy', -Math.cos(angle) * 5);
+      ellipse.setAttribute('rx', 3.2);
+      ellipse.setAttribute('ry', 5.5);
+      ellipse.setAttribute('transform', `rotate(${p * 72})`);
+      ellipse.setAttribute('fill', color);
+      ellipse.setAttribute('fill-opacity', '0.88');
+      svg.appendChild(ellipse);
+    }
+    // centro amarelinho
+    const center = document.createElementNS(ns, 'circle');
+    center.setAttribute('r', '2.5');
+    center.setAttribute('fill', '#FFE066');
+    center.setAttribute('fill-opacity', '0.9');
+    svg.appendChild(center);
+
+    bg.appendChild(svg);
+  }
+})();
+
+// ── QUIZ DATA ──────────────────────────────────────────────────────────────
+// ✏️ EDITE AQUI: correct é o índice da resposta certa (0 = primeira, 1 = segunda, etc.)
+const quizData = [
+  {
+    q: "Qual universo anime o Ian mais ama?",
+    opts: ["One Piece", "Naruto", "Attack on Titan", "Dragon Ball"],
+    correct: 0,
+    fun: "Edite aqui com uma curiosidade engraçada sobre a resposta! 🏴‍☠️"
+  },
+  {
+    q: "Se o Ian fosse um personagem de anime, qual seria seu poder?",
+    opts: ["Velocidade infinita", "Ler mentes", "Controlar o tempo", "Força ilimitada"],
+    correct: 2,
+    fun: "Coloque aqui uma piada ou fato sobre o Ian relacionado à resposta certa!"
+  },
+  {
+    q: "Qual comida japonesa o Ian nunca recusa?",
+    opts: ["Ramen", "Sushi", "Takoyaki", "Onigiri"],
+    correct: 0,
+    fun: "Ele poderia comer isso todos os dias da vida. 🍜"
+  },
+  {
+    q: "Em qual cidade do Japão o Ian viveria?",
+    opts: ["Tóquio", "Kyoto", "Osaka", "Hokkaido"],
+    correct: 0,
+    fun: "Tóquio, claro! Centro de tudo que ele ama."
+  },
+  {
+    q: "Qual é o maior talento secreto do Ian?",
+    opts: ["Cozinhar", "Imitar personagens", "Contar histórias", "Memorizar trilhas sonoras"],
+    correct: 2,
+    fun: "Todo mundo que já ouviu uma história do Ian sabe! 😄"
+  },
+  {
+    q: "Qual defeito charmoso o Ian tem de verdade?",
+    opts: ["Chega atrasado", "Começa 10 animes ao mesmo tempo", "Esquece o que foi comprar", "Dorme no meio do filme"],
+    correct: 1,
+    fun: "A lista de animes começados e nunca terminados é ENORME. 😂"
+  },
+  {
+    q: "Se o Ian fosse um pokémon, qual seria?",
+    opts: ["Gengar", "Eevee", "Snorlax", "Pikachu"],
+    correct: 1,
+    fun: "Eevee: pode virar qualquer coisa dependendo do humor do dia. 🦊"
+  },
+  {
+    q: "O que o Ian diria pra si mesmo aos 18 anos?",
+    opts: ["Estuda mais", "Viaja mais cedo", "Não liga pra opinião alheia", "Compra Bitcoin"],
+    correct: 2,
+    fun: "Com 28 anos, ele definitivamente aprendeu isso. ✨"
+  }
+];
+
+const glyphs = ['一', '二', '三', '四', '五', '六', '七', '八'];
+const letters = ['A', 'B', 'C', 'D'];
+let cur = 0, score = 0, answered = false;
+
+function startQuiz() {
+  cur = 0; score = 0; answered = false;
+  document.getElementById('quizResult').classList.remove('show');
+  document.getElementById('quizCard').style.display = '';
+  renderQ();
+}
+
+function renderQ() {
+  const d = quizData[cur], n = quizData.length;
+  document.getElementById('quizBar').style.width = `${(cur / n) * 100}%`;
+  document.getElementById('quizNum').textContent = `PERGUNTA ${String(cur+1).padStart(2,'0')} / ${String(n).padStart(2,'0')}`;
+  document.getElementById('quizQ').textContent = d.q;
+  document.getElementById('quizScore').textContent = `${score} / ${cur} certa${cur !== 1 ? 's' : ''}`;
+  document.getElementById('quizNext').disabled = true;
+  document.getElementById('quizFb').className = 'quiz-fb';
+  document.getElementById('quizFb').textContent = '';
+  answered = false;
+  document.getElementById('quizOpts').innerHTML = d.opts.map((o, i) => `
+    <button class="quiz-opt" onclick="pick(${i})" id="opt${i}">
+      <span class="opt-glyph">${glyphs[i] || letters[i]}</span>
+      <span>${o}</span>
+    </button>`).join('');
+}
+
+function pick(i) {
+  if (answered) return;
+  answered = true;
+  const d = quizData[cur];
+  document.querySelectorAll('.quiz-opt').forEach((el, idx) => {
+    el.style.pointerEvents = 'none';
+    if (idx === d.correct) el.classList.add('correct');
+    else if (idx === i) el.classList.add('wrong');
+  });
+  const fb = document.getElementById('quizFb');
+  if (i === d.correct) { score++; fb.className = 'quiz-fb ok'; fb.textContent = '正解！ ' + d.fun; }
+  else { fb.className = 'quiz-fb fail'; fb.textContent = `不正解。 A certa era "${d.opts[d.correct]}" — ${d.fun}`; }
+  document.getElementById('quizScore').textContent = `${score} / ${cur + 1} certa${(cur+1) !== 1 ? 's' : ''}`;
+  const btn = document.getElementById('quizNext');
+  btn.disabled = false;
+  btn.textContent = cur === quizData.length - 1 ? '結果 → Resultado' : '次へ → Próxima';
+}
+
+document.getElementById('quizNext').addEventListener('click', () => {
+  cur++;
+  if (cur < quizData.length) renderQ();
+  else showResult();
+});
+
+function showResult() {
+  document.getElementById('quizCard').style.display = 'none';
+  document.getElementById('quizBar').style.width = '100%';
+  const r = document.getElementById('quizResult');
+  r.classList.add('show');
+  const pct = score / quizData.length;
+  const kanjis = ['失敗', '頑張れ', '良い', '合格', '完璧'];
+  const msgs = [
+    'Hmm... precisa conhecer mais o Ian! Joga de novo!',
+    'Quase lá! Você conhece algumas coisas sobre ele.',
+    'Bom! Você é um fã de primeira linha do Ian.',
+    'Incrível! Você é praticamente o biógrafo oficial do Ian. 🎉',
+    '完璧！ Perfeito! Você conhece o Ian melhor do que ele mesmo.'
+  ];
+  const idx = pct < 0.25 ? 0 : pct < 0.5 ? 1 : pct < 0.75 ? 2 : pct < 1 ? 3 : 4;
+  document.getElementById('resultKanji').textContent = kanjis[idx];
+  document.getElementById('resultScore').textContent = `${score} / ${quizData.length} perguntas certas`;
+  document.getElementById('resultMsg').textContent = msgs[idx];
+}
+
+startQuiz();
+
+// ── FOTOS ──────────────────────────────────────────────────────────────────
+const photos = [];
+function addPhotos(files) {
+  Array.from(files).forEach(f => photos.push(URL.createObjectURL(f)));
+  renderPhotos();
+  toast(`${files.length} foto${files.length > 1 ? 's' : ''} adicionada${files.length > 1 ? 's' : ''}! 📸`);
+  document.getElementById('photoInput').value = '';
+}
+function renderPhotos() {
+  const g = document.getElementById('photoGrid'), e = document.getElementById('photoEmpty');
+  if (!photos.length) { g.innerHTML = ''; e.style.display = 'block'; return; }
+  e.style.display = 'none';
+  g.innerHTML = photos.map((u, i) => `
+    <div class="photo-card">
+      <img src="${u}" alt="" onclick="openImg('${u}')">
+      <div class="photo-overlay">
+        <button class="photo-del" onclick="delPhoto(${i})">✕ remover</button>
+      </div>
+    </div>`).join('');
+}
+function delPhoto(i) { photos.splice(i, 1); renderPhotos(); }
+const pz = document.getElementById('photoZone');
+pz.addEventListener('dragover', e => { e.preventDefault(); pz.style.borderColor = 'var(--red2)'; });
+pz.addEventListener('dragleave', () => pz.style.borderColor = '');
+pz.addEventListener('drop', e => { e.preventDefault(); pz.style.borderColor = ''; addPhotos(e.dataTransfer.files); });
+renderPhotos();
+
+// ── VÍDEOS ─────────────────────────────────────────────────────────────────
+const videos = [];
+function addVideo(file) {
+  if (!file) return;
+  const name = document.getElementById('videoName').value.trim() || 'Alguém especial';
+  const tag = document.getElementById('videoTag').value || 'Depoimento';
+  videos.push({ url: URL.createObjectURL(file), name, tag });
+  renderVideos();
+  toast('Depoimento adicionado! 🎬');
+  document.getElementById('videoInput').value = '';
+  document.getElementById('videoName').value = '';
+  document.getElementById('videoTag').value = '';
+}
+function renderVideos() {
+  const g = document.getElementById('videoGrid'), e = document.getElementById('videoEmpty');
+  if (!videos.length) { g.innerHTML = ''; e.style.display = 'block'; return; }
+  e.style.display = 'none';
+  g.innerHTML = videos.map((v, i) => `
+    <div class="video-card">
+      <div class="video-thumb" onclick="openVid('${v.url}')">
+        <video src="${v.url}" preload="metadata"></video>
+        <div class="v-play-overlay"><div class="v-play-btn">▶</div></div>
+      </div>
+      <div class="video-info">
+        <div class="video-who">${v.name}</div>
+        <span class="video-tag-pill">${v.tag}</span>
+      </div>
+      <button class="vid-del" onclick="delVid(${i})">✕ remover</button>
+    </div>`).join('');
+}
+function delVid(i) { videos.splice(i, 1); renderVideos(); }
+const vz = document.getElementById('videoZone');
+vz.addEventListener('dragover', e => { e.preventDefault(); vz.style.borderColor = 'var(--red2)'; });
+vz.addEventListener('dragleave', () => vz.style.borderColor = '');
+vz.addEventListener('drop', e => { e.preventDefault(); vz.style.borderColor = ''; addVideo(e.dataTransfer.files[0]); });
+renderVideos();
+
+// ── LIGHTBOX ───────────────────────────────────────────────────────────────
+function openVid(url) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lbImg').style.display = 'none';
+  const v = document.getElementById('lbVid');
+  v.style.display = 'block'; v.src = url; v.play();
+  lb.classList.add('open');
+}
+function openImg(url) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lbVid').pause(); document.getElementById('lbVid').style.display = 'none';
+  const img = document.getElementById('lbImg');
+  img.style.display = 'block'; img.src = url;
+  lb.classList.add('open');
+}
+function closeLb(e) {
+  if (e && e.target !== document.getElementById('lightbox') && !e.target.classList.contains('lb-close')) return;
+  document.getElementById('lightbox').classList.remove('open');
+  document.getElementById('lbVid').pause(); document.getElementById('lbVid').src = '';
+}
+
+// ── TOAST ──────────────────────────────────────────────────────────────────
+function toast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+</script>
+</body>
+</html>
